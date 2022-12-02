@@ -7,11 +7,13 @@ function TodoForm({ setInputText, todos, setTodos, inputText }) {
 
   const submitTodoHandler = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos,
-      { text: inputText, completed: false, id: Date.now().toString() },
-    ]);
-    setInputText("");
+    if (inputText.length != 0) {
+      setTodos([
+        ...todos,
+        { text: inputText, completed: false, id: Date.now().toString() },
+      ]);
+      setInputText("");
+    }
   };
 
   return (

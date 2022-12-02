@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Todo from "./Todo";
 
 const TodoList = ({ todos, setTodos }) => {
-  console.log(todos);
   const [amount, setAmount] = useState(0);
 
   const deleteHandler = () => {

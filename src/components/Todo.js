@@ -7,7 +7,6 @@ const Todo = ({ text, todo, countSelected }) => {
   function completeHandler() {
     todo.completed = !todo.completed;
     setIsCompleted(!isCompleted);
-    console.log(todo.completed);
   }
 
   useEffect(() => {
